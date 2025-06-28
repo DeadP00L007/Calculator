@@ -2,13 +2,8 @@ version: '3.8'
 
 services:
   calculator:
-    build:
-      context: .
-    image: calculator
+    image: dcx369/calculator:v10.0.1
+    container_name: calculator
     ports:
       - "8082:80"
-    volumes:
-      - .:/usr/share/nginx/html
-    container_name: calculator
     restart: always
-  
