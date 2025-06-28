@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  web:
+  calculator:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "80:80"
-    volumes:
-      - .:/usr/share/nginx/html
-    container_name: nginx-perl-server
+    container_name: calculator-nginx
+    restart: always
+
